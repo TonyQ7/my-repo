@@ -1,0 +1,26 @@
+name: Terraform CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+      - name: Terraform Format
+        run: terraform -chdir=infrastructure fmt -check
+      - name: Terraform Plan
+        run: terraform -chdir=infrastructure plan
+  deploy:
+    needs: terraform
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy placeholder
+        run: echo "Deploying infrastructure"
