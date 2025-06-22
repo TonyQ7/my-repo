@@ -1,0 +1,22 @@
+{
+  "bio": "Hi, I'm Tony, a full-stack developer ...",
+  "tech_icons": {
+    "Python": "https://example.com/python.svg",
+    "React": "https://example.com/react.svg"
+  },
+  "projects": [
+    {
+      "name": "awesome-webapp",
+      "url": "https://github.com/TonyQ7/awesome-webapp",
+      "description": "React+Node full-stack app",
+      "topics": ["react", "nodejs", "docker"]
+    },
+    {
+      "name": "ml-pipeline",
+      "url": "https://github.com/TonyQ7/ml-pipeline",
+      "description": "ML pipeline template",
+      "topics": ["ml", "data", "pipeline"]
+    }
+  ],
+  "pinned": ["awesome-webapp", "ml-pipeline"]
+}
